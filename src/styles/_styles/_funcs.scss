@@ -1,0 +1,28 @@
+@use "sass:math";
+
+/*------- COLORS-------*/
+$red: red;
+
+/*------- BREAKPOINTS -------*/
+$breakpoint-desktop: 820px;
+
+@mixin _desktop {
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin _mobile {
+  @media (max-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+/*------- TRANSLATION TO REM -------*/
+@function toRem($px) {
+  @return math.div($px, 16) + rem;
+}
+
+@function toRemMob($px) {
+  @return math.div($px, 12.834) + rem;
+}
