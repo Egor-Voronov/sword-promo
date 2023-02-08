@@ -1,0 +1,36 @@
+@mixin fontFace($fontFamily, $fontEndpoint) {
+  $fontsPath: "../../../src/assets/fonts";
+
+  @font-face {
+    font-family: $fontFamily;
+    src: url(#{$fontsPath}/#{$fontEndpoint});
+  }
+}
+
+@mixin fontFamily($fontFamily, $fontWeight, $mobSize, $deskSize) {
+  %#{$fontFamily} {
+    color: $black;
+    font-family: $fontFamily;
+    font-weight: $fontWeight;
+    font-size: toRemMob($mobSize);
+
+    @include _desktop {
+      font-size: toRem($deskSize);
+    }
+  }
+}
+
+@mixin _CreateFont(
+  $fontFamily,
+  $fontEndpoint,
+  $fontWeight,
+  $mobSize,
+  $deskSize
+) {
+  @include fontFace($fontFamily, $fontEndpoint);
+  @include fontFamily($fontFamily, $fontWeight, $mobSize, $deskSize);
+}
+
+/*------- CREATE FONTS -------*/
+
+@include _CreateFont("NeueBlack", "NeueHaasDisplayBlack.ttf", 800, 100, 1000);

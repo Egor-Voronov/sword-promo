@@ -1,15 +1,15 @@
 <script lang="ts">
-export default {};
+import MainScreen from "@/pages/MainScreen.vue";
+
+export default {
+  components: {
+    MainScreen,
+  },
+};
 </script>
 
 <template>
-  <h1>amogus</h1>
+  <MainScreen />
 </template>
 
-<style module lang="scss">
-@include _desktop {
-  h1 {
-    color: $red;
-  }
-}
-</style>
+<style module lang="scss"></style>
