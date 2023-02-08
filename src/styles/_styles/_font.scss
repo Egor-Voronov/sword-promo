@@ -1,5 +1,5 @@
 @mixin fontFace($fontFamily, $fontEndpoint) {
-  $fontsPath: "../../../src/assets/fonts";
+  $fontsPath: "~/fonts";
 
   @font-face {
     font-family: $fontFamily;
@@ -7,30 +7,22 @@
   }
 }
 
-@mixin fontFamily($fontFamily, $fontWeight, $mobSize, $deskSize) {
+@mixin fontFamily($fontFamily, $fontWeight) {
   %#{$fontFamily} {
     color: $black;
     font-family: $fontFamily;
     font-weight: $fontWeight;
-    font-size: toRemMob($mobSize);
-
-    @include _desktop {
-      font-size: toRem($deskSize);
-    }
   }
 }
 
-@mixin _CreateFont(
-  $fontFamily,
-  $fontEndpoint,
-  $fontWeight,
-  $mobSize,
-  $deskSize
-) {
+@mixin _CreateFont($fontFamily, $fontEndpoint, $fontWeight) {
   @include fontFace($fontFamily, $fontEndpoint);
-  @include fontFamily($fontFamily, $fontWeight, $mobSize, $deskSize);
+  @include fontFamily($fontFamily, $fontWeight);
 }
 
 /*------- CREATE FONTS -------*/
 
-@include _CreateFont("NeueBlack", "NeueHaasDisplayBlack.ttf", 800, 100, 1000);
+@include _CreateFont("NeueBlack", "NeueHaasDisplayBlack.ttf", 900);
+@include _CreateFont("NeueBold", "NeueHaasDisplayBold.ttf", 800);
+@include _CreateFont("NeueMedium", "NeueHaasDisplayMedium.ttf", 700);
+@include _CreateFont("NeueRoman", "NeueHaasDisplayRoman.ttf", 600);

@@ -4,6 +4,7 @@
 
 <style module lang="scss">
 h1 {
-  @extend %NeueBlack;
+  @extend %NeueMedium;
+  font-size: 500px;
 }
 </style>

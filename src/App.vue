@@ -1,5 +1,5 @@
 <script lang="ts">
-import MainScreen from "@/pages/MainScreen.vue";
+import MainScreen from "@/screens/MainScreen/MainScreen.vue";
 
 export default {
   components: {
