@@ -9,7 +9,6 @@
 
 @mixin fontFamily($fontFamily, $fontWeight) {
   %#{$fontFamily} {
-    color: $black;
     font-family: $fontFamily;
     font-weight: $fontWeight;
   }
@@ -26,3 +25,11 @@
 @include _CreateFont("NeueBold", "NeueHaasDisplayBold.ttf", 800);
 @include _CreateFont("NeueMedium", "NeueHaasDisplayMedium.ttf", 700);
 @include _CreateFont("NeueRoman", "NeueHaasDisplayRoman.ttf", 600);
+
+%topPanelBlack {
+  @extend %NeueBlack;
+
+  @include _desktop {
+    font-size: toRem(30);
+  }
+}

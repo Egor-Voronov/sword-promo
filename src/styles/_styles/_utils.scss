@@ -6,3 +6,10 @@ body {
   overflow: hidden;
   color: $black;
 }
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}

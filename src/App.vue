@@ -1,15 +1,8 @@
-<script lang="ts">
+<script lang="ts" setup>
 import MainScreen from "@/screens/MainScreen/MainScreen.vue";
-
-export default {
-  components: {
-    MainScreen,
-  },
-};
+import FixedPanels from "@/modules/FixedPanels/FixedPanels.vue";
 </script>
 
-<template>
-  <MainScreen />
-</template>
+<template><FixedPanels /> <MainScreen /></template>
 
 <style module lang="scss"></style>
