@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import FixedPanel from "../ui/FixedPanel.vue/";
 import Socials from "./Socials/Socials.vue";
+import LangSwitcher from "./LangSwitcher/LangSwitcher.vue";
 import rotateImg from "~/img/FixedPanels/rotate-y-axis.svg";
 </script>
 
@@ -8,6 +9,7 @@ import rotateImg from "~/img/FixedPanels/rotate-y-axis.svg";
   <fixed-panel :class="$style.topPanel">
     <Socials />
     <img :class="$style.img" :src="rotateImg" alt="rotate" />
+    <LangSwitcher />
   </fixed-panel>
 </template>
 

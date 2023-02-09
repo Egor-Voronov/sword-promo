@@ -19,5 +19,10 @@ const socialsList = ref<SocialsType[]>([
 
 <style module lang="scss">
 .socials {
+  display: flex;
+  @include _desktop {
+    height: toRem(20);
+    gap: toRem(15);
+  }
 }
 </style>

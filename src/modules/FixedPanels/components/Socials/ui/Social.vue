@@ -23,5 +23,6 @@ const props = defineProps({
 
 <style lang="scss" module>
 .social {
+  @extend %FixedPanelsBlack;
 }
 </style>

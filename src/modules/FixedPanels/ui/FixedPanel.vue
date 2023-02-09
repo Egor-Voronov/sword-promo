@@ -1,22 +1,26 @@
 <template>
   <div :class="$style.fixedPanel">
-    <slot></slot>
+    <div :class="$style.panelContainer">
+      <slot></slot>
+    </div>
   </div>
 </template>
 
 <style lang="scss" module>
 .fixedPanel {
   position: fixed;
-  width: 100vw;
+  width: 100%;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  //background-color: red;
+}
 
-  background-color: red;
-
+.panelContainer {
   @include _desktop {
-    padding: toRem(50);
+    padding: toRem(40);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 </style>
