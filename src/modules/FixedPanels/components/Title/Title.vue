@@ -1,9 +1,9 @@
 <template>
-  <p>vsport</p>
+  <p :class="$style.title">vsport</p>
 </template>
 
 <style module lang="scss">
-p {
+.title {
   @extend %FixedPanelsBlack;
 }
 </style>
