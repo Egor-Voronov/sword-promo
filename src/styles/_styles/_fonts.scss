@@ -35,3 +35,13 @@
     letter-spacing: toRem(-1);
   }
 }
+
+%FixedPanelsMeduim {
+  @extend %NeueMedium;
+  text-transform: uppercase;
+
+  @include _desktop {
+    font-size: toRem(25);
+    letter-spacing: toRem(-1);
+  }
+}
