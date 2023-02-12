@@ -4,6 +4,6 @@
 
 <style module lang="scss">
 .title {
-  @extend %FixedPanelsMeduim;
+  @extend %FixedPanelsMedium;
 }
 </style>
