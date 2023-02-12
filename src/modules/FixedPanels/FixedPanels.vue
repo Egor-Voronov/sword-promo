@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import TopPanel from "./components/TopPanel.vue";
 import BottomPanel from "./components/BottomPanel.vue";
 </script>

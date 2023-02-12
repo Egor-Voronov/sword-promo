@@ -4,6 +4,6 @@
 
 <style module lang="scss">
 .scrollTip {
-  @extend %FixedPanelsMeduim;
+  @extend %FixedPanelsMedium;
 }
 </style>
