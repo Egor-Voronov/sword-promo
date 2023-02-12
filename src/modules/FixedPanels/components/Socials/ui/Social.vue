@@ -16,6 +16,7 @@ const props = defineProps({
     :key="social.id"
     :class="$style.social"
     v-for="social in socials"
+    class="link"
   >
     {{ social.title }}
   </a>
