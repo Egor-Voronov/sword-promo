@@ -12,7 +12,7 @@ const socialsList = ref<SocialsType[]>([
 </script>
 
 <template>
-  <div :class="$style.socials">
+  <div :class="$style.socials" class="link">
     <Social :socials="socialsList" />
   </div>
 </template>
