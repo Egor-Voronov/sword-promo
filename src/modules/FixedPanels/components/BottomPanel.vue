@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import FixedPanel from "../ui/FixedPanel.vue/";
+import FixedPanel from "../ui/FixedPanel.vue";
 import ScrollTip from "./ScrollTip/ScrollTip.vue";
 import Title from "./Title/Title.vue";
 </script>

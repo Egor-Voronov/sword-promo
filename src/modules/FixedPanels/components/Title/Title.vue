@@ -1,5 +1,5 @@
 <template>
-  <p :class="$style.title">vsport</p>
+  <p class="link" :class="$style.title">vsport</p>
 </template>
 
 <style module lang="scss">

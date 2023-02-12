@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import FixedPanel from "../ui/FixedPanel.vue/";
+import FixedPanel from "../ui/FixedPanel.vue";
 import Socials from "./Socials/Socials.vue";
 import LangSwitcher from "./LangSwitcher/LangSwitcher.vue";
 import rotateImg from "~/img/FixedPanels/rotate-y-axis.svg";
