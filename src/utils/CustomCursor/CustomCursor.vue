@@ -29,10 +29,10 @@ onUnmounted(() => document.removeEventListener("mousemove", onMousemove));
   .innerCursor {
     position: fixed;
     left: toRem(10);
-    width: toRem(15);
-    height: toRem(15);
+    width: toRem(10);
+    height: toRem(10);
     transform: translate(-50%, -50%);
-    background-color: #fff;
+    background-color: $gray;
     mix-blend-mode: difference;
     border-radius: 50%;
     pointer-events: none;
@@ -51,6 +51,7 @@ onUnmounted(() => document.removeEventListener("mousemove", onMousemove));
     border-radius: 50%;
     z-index: 999;
     transition: 0.1s;
+    pointer-events: none;
   }
 }
 </style>
