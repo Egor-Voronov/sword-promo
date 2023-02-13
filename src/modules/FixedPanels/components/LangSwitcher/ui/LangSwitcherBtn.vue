@@ -1,5 +1,5 @@
 <template>
-  <button class="link">ru</button>
+  <button>ru</button>
 </template>
 
 <style module lang="scss">
