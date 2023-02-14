@@ -6,22 +6,39 @@ const innerCursor = ref<HTMLDivElement>;
 const outerCursor = ref<HTMLDivElement>;
 
 const pos = ref({ x: 0, y: 0 });
+let isLBMKeyUp = ref<boolean>(false);
 const cursor = computed(() => ({
   top: `${pos.value.y}px`,
   left: `${pos.value.x}px`,
+  border: `${isLBMKeyUp.value ? "none" : ""}`,
+  width: `${isLBMKeyUp.value ? "7px" : ""}`,
+  height: `${isLBMKeyUp.value ? "7px" : ""}`,
 }));
 
 function onMousemove({ clientX: x, clientY: y }: axisClients) {
   pos.value = { x, y };
 }
 
-onMounted(() => document.addEventListener("mousemove", onMousemove));
+function onMouseUp() {}
+
+onMounted(() => {
+  document.addEventListener("mousemove", onMousemove);
+  document.addEventListener("mouseup");
+});
 onUnmounted(() => document.removeEventListener("mousemove", onMousemove));
 </script>
 
 <template>
-  <div :class="$style.innerCursor" :style="cursor" />
-  <div :class="$style.outerCursor" :style="cursor" />
+  <div
+    :class="$style.innerCursor"
+    :style="cursor"
+    @keyup.enter="isLBMKeyUp = true"
+  />
+  <div
+    :class="$style.outerCursor"
+    :style="cursor"
+    @keyup.enter="isLBMKeyUp = true"
+  />
 </template>
 
 <style module lang="scss">
