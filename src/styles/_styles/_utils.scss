@@ -1,10 +1,13 @@
 * {
   cursor: none;
+  scrollbar-width: none;
 }
 
 body {
   background-color: $gray;
   box-sizing: border-box;
+
+  height: 200vh;
 }
 
 .wrapper {
@@ -19,4 +22,13 @@ a {
     color: $black;
     text-decoration: none;
   }
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }

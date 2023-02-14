@@ -2,9 +2,6 @@
 import { computed, onMounted, onUnmounted, ref } from "vue";
 import type { axisClients } from "@/utils/CustomCursor/types/axisClients";
 
-const innerCursor = ref<HTMLDivElement>;
-const outerCursor = ref<HTMLDivElement>;
-
 const pos = ref({ x: 0, y: 0 });
 const cursor = computed(() => ({
   top: `${pos.value.y}px`,
