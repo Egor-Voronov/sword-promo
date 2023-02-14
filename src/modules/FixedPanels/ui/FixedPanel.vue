@@ -15,12 +15,14 @@
 }
 
 .panelContainer {
+  padding: toRemMob(40) toRemMob(20);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   @include _desktop {
     padding: toRem(40);
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
 }
 </style>

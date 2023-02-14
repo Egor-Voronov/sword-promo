@@ -29,6 +29,8 @@
 %FixedPanelsBlack {
   @extend %NeueBlack;
   text-transform: uppercase;
+  font-size: toRemMob(15);
+  letter-spacing: toRemMob(-1);
 
   @include _desktop {
     font-size: toRem(25);
