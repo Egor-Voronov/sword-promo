@@ -19,6 +19,13 @@ import rotateImg from "~/img/FixedPanels/rotate-y-axis.svg";
 }
 
 img {
+  width: toRemMob(15);
+  height: toRemMob(15);
+
+  // pixel perfect styles
+  position: relative;
+  left: toRemMob(-7);
+
   @include _desktop {
     width: toRem(30);
     height: toRem(30);
