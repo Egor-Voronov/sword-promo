@@ -3,39 +3,22 @@ import { computed, onMounted, onUnmounted, ref } from "vue";
 import type { axisClients } from "@/utils/CustomCursor/types/axisClients";
 
 const pos = ref({ x: 0, y: 0 });
-let isLBMKeyUp = ref<boolean>(false);
 const cursor = computed(() => ({
   top: `${pos.value.y}px`,
   left: `${pos.value.x}px`,
-  border: `${isLBMKeyUp.value ? "none" : ""}`,
-  width: `${isLBMKeyUp.value ? "7px" : ""}`,
-  height: `${isLBMKeyUp.value ? "7px" : ""}`,
 }));
 
 function onMousemove({ clientX: x, clientY: y }: axisClients) {
   pos.value = { x, y };
 }
 
-function onMouseUp() {}
-
-onMounted(() => {
-  document.addEventListener("mousemove", onMousemove);
-  document.addEventListener("mouseup");
-});
+onMounted(() => document.addEventListener("mousemove", onMousemove));
 onUnmounted(() => document.removeEventListener("mousemove", onMousemove));
 </script>
 
 <template>
-  <div
-    :class="$style.innerCursor"
-    :style="cursor"
-    @keyup.enter="isLBMKeyUp = true"
-  />
-  <div
-    :class="$style.outerCursor"
-    :style="cursor"
-    @keyup.enter="isLBMKeyUp = true"
-  />
+  <div :class="$style.innerCursor" :style="cursor" />
+  <div :class="$style.outerCursor" :style="cursor" />
 </template>
 
 <style module lang="scss">
