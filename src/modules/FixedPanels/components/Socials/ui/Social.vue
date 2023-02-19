@@ -11,18 +11,9 @@ const props = defineProps({
 </script>
 
 <template>
-  <a
-    :href="social.href"
-    :key="social.id"
-    :class="$style.social"
-    v-for="social in socials"
-  >
+  <a :href="social.href" :key="social.id" v-for="social in socials">
     {{ social.title }}
   </a>
 </template>
 
-<style lang="scss" module>
-.social {
-  @extend %FixedPanelsBlack;
-}
-</style>
+<style lang="scss" module></style>

@@ -16,6 +16,7 @@ import rotateImg from "~/img/FixedPanels/rotate-y-axis.svg";
 <style lang="scss" module>
 .topPanel {
   top: 0;
+  @extend %FixedPanelsBold;
 }
 
 img {

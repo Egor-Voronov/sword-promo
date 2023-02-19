@@ -14,5 +14,7 @@ import Title from "./Title/Title.vue";
 <style lang="scss" module>
 .bottomPanel {
   bottom: 0;
+
+  @extend %FixedPanelsLight;
 }
 </style>

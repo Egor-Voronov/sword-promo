@@ -1,9 +1,5 @@
 <template>
-  <p :class="$style.scrollTip">scroll</p>
+  <p>scroll</p>
 </template>
 
-<style module lang="scss">
-.scrollTip {
-  @extend %FixedPanelsMedium;
-}
-</style>
+<style module lang="scss"></style>

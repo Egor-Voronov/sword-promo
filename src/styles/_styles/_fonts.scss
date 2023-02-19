@@ -21,13 +21,12 @@
 
 /*------- CREATE FONTS -------*/
 
-@include _CreateFont("NeueBlack", "NeueHaasDisplayBlack.ttf", 900);
-@include _CreateFont("NeueBold", "NeueHaasDisplayBold.ttf", 800);
-@include _CreateFont("NeueMedium", "NeueHaasDisplayMedium.ttf", 700);
-@include _CreateFont("NeueRoman", "NeueHaasDisplayRoman.ttf", 600);
+@include _CreateFont("europeBold", "europe-bold.woff2", 900);
+@include _CreateFont("europeNormal", "europedemi-normal.woff2", 400);
+@include _CreateFont("europeLight", "europe-normal.woff2", 400);
 
-%FixedPanelsBlack {
-  @extend %NeueBlack;
+%FixedPanelsBold {
+  @extend %europeBold;
   text-transform: uppercase;
   font-size: toRemMob(15);
   letter-spacing: toRemMob(-1);
@@ -38,12 +37,12 @@
   }
 }
 
-%FixedPanelsMedium {
-  @extend %NeueMedium;
+%FixedPanelsLight {
+  @extend %europeNormal;
   text-transform: uppercase;
 
   @include _desktop {
     font-size: toRem(25);
-    letter-spacing: toRem(-1);
+    letter-spacing: toRem(-2.5);
   }
 }

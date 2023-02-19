@@ -6,7 +6,6 @@
 button {
   background-color: rgba(#fff, 0);
   border: none;
-
-  @extend %FixedPanelsBlack;
+  @extend %FixedPanelsBold;
 }
 </style>
