@@ -1,7 +1,13 @@
-<script lang="ts" setup>
-import LangSwitcherBtn from "./ui/LangSwitcherBtn.vue";
-</script>
+<script lang="ts" setup></script>
 
 <template>
-  <LangSwitcherBtn />
+  <button>ru</button>
 </template>
+
+<style module lang="scss">
+button {
+  background-color: rgba(#fff, 0);
+  border: none;
+  @extend %FixedPanelsBold;
+}
+</style>
