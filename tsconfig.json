@@ -1,13 +1,37 @@
 {
   "extends": "@vue/tsconfig/tsconfig.web.json",
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+  "include": [
+    "env.d.ts",
+    "src/**/*",
+    "src/**/*.vue"
+  ],
   "compilerOptions": {
+    "strict": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ]
     }
   },
-
+  "resolveJsonModule": true,
+  "moduleResolution": "node",
+  "strictNullChecks": true,
+  "strictBindCallApply": true,
+  "strictFunctionTypes": true,
+  "strictPropertyInitialization": true,
+  "alwaysStrict": true,
+  "noImplicitAny": true,
+  "noImplicitThis": true,
+  "useUnknownInCatchVariables": true,
+  "allowSyntheticDefaultImports": true,
+  "esModuleInterop": true,
+  "forceConsistentCasingInFileNames": true,
+  "newLine": "crlf",
+  "skipLibCheck": true,
+  "noFallthroughCasesInSwitch": true,
+  "noImplicitOverride": true,
+  //  "downLevelIterator": true - чтобы сет заспредить и т.д.
   "references": [
     {
       "path": "./tsconfig.config.json"

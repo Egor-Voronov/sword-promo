@@ -9,10 +9,6 @@
     "composite": true,
     "types": [
       "node"
-    ],
-    "strictNullChecks": true,
-    "strictBindCallApply": true,
-    "strictFunctionTypes": true,
-    "strictPropertyInitialization": true,
+    ]
   }
 }
