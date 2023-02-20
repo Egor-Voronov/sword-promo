@@ -1,29 +1,16 @@
 import { createI18n } from "vue-i18n";
-import { usePreferredLanguages } from "@vueuse/core";
-
-const languages = usePreferredLanguages();
+import en from "./locales/en.json";
+import ru from "./locales/ru.json";
+import { useGlobalState } from "@/store/globalStore";
 
 // export type Messages = {
 //   [key: string]: string | Messages;
 // }; oof fr hot
 
-const messages = {
-  en: {
-    fixedPanels: {
-      scrollTip: "scroll",
-    },
-  },
-  ru: {
-    fixedPanels: {
-      scrollTip: "прокрутка",
-    },
-  },
-};
-
 export default createI18n({
-  locale: languages.value[0].includes("ru") ? "ru" : "en",
+  locale: useGlobalState().value,
   fallbackLocale: "en",
   legacy: false,
   globalInjection: true,
-  messages,
+  messages: { en, ru },
 });
