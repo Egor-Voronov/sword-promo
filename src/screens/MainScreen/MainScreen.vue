@@ -9,19 +9,15 @@ const test = () => {
     initial: {
       opacity: 0,
       y: 300,
-      transition: {
-        delay: 150,
-        dumped: 100,
-        repeatType: "reverse",
-      },
     },
     enter: {
       opacity: 1,
       y: 0,
       transition: {
-        delay: 150,
-        dumped: 100,
-        repeatType: "reverse",
+        delay: 100,
+        type: "spring",
+        damping: 25,
+        mass: 0.5,
       },
     },
   });
