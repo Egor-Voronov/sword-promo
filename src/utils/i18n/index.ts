@@ -1,7 +1,7 @@
 import { createI18n } from "vue-i18n";
 import en from "./locales/en.json";
 import ru from "./locales/ru.json";
-import { useCurrentLang } from "@/store";
+import { useCurrentLang } from "@/store/language";
 
 // export type Messages = {
 //   [key: string]: string | Messages;
