@@ -1,14 +1,14 @@
 import { createI18n } from "vue-i18n";
 import en from "./locales/en.json";
 import ru from "./locales/ru.json";
-import { useGlobalState } from "@/store";
+import { useCurrentLang } from "@/store";
 
 // export type Messages = {
 //   [key: string]: string | Messages;
 // }; oof fr hot
 
 export default createI18n({
-  locale: useGlobalState().value,
+  locale: useCurrentLang().value,
   fallbackLocale: "en",
   legacy: false,
   globalInjection: true,

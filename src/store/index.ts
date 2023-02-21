@@ -9,6 +9,6 @@ const currentLang = computed(() =>
   usePreferredLanguages().value[0].includes("ru") ? "ru" : "en"
 );
 
-export const useGlobalState = createGlobalState(() =>
+export const useCurrentLang = createGlobalState(() =>
   useStorage("lang", currentLang.value)
 );
