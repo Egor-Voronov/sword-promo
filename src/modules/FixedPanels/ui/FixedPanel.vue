@@ -11,6 +11,7 @@
   position: fixed;
   width: 100%;
   z-index: 90;
+  pointer-events: none;
   //background-color: red;
 }
 

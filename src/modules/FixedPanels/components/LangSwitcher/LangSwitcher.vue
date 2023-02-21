@@ -9,5 +9,6 @@ button {
   background-color: rgba(#fff, 0);
   border: none;
   @extend %FixedPanelsBold;
+  pointer-events: auto;
 }
 </style>

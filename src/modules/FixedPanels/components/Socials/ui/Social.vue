@@ -16,4 +16,8 @@ const props = defineProps({
   </a>
 </template>
 
-<style lang="scss" module></style>
+<style lang="scss" module>
+a {
+  pointer-events: auto;
+}
+</style>
