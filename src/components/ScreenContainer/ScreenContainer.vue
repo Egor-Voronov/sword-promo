@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { ref } from "vue"
-import { screenAnimation } from "@/utils/animations/screenAnimation";
+import { ref } from "vue";
+import { screenScroll } from "@/utils/animations/screenScroll";
 
-const targetEl = ref<HTMLDivElement>
+const targetEl = ref<HTMLDivElement>;
 </script>
 
 <template>
   <div
     class="target"
     ref="targetEl"
-    @click="screenAnimation(targetEl)"
+    @click="screenScroll(targetEl)"
     :class="$style.mainContainer"
   >
     <slot></slot>
