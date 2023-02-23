@@ -14,7 +14,7 @@ const screens: screensType = {
 </script>
 
 <template>
-  <screen-container>
+  <ScreenContainer>
     <component :is="screens[currentScreen]" />
-  </screen-container>
+  </ScreenContainer>
 </template>

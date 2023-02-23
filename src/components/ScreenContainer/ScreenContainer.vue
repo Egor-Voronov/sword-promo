@@ -1,15 +1,14 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { screenScroll } from "@/utils/animations/screenScroll";
+import { screenAppear } from "@/utils/animations/screenAppear";
 
 const targetEl = ref<HTMLDivElement>;
 </script>
 
 <template>
   <div
-    class="target"
     ref="targetEl"
-    @click="screenScroll(targetEl)"
+    @click="screenAppear(targetEl)"
     :class="$style.mainContainer"
   >
     <slot></slot>

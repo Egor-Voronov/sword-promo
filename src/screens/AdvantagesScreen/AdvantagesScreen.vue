@@ -1,11 +1,7 @@
-<script setup lang="ts">
-import ScreenContainer from "@/components/ScreenContainer/ScreenContainer.vue";
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <ScreenContainer>
-    <div :class="$style.test"></div>
-  </ScreenContainer>
+  <div :class="$style.test"></div>
 </template>
 
 <style module lang="scss">
