@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import type { Component } from "vue";
 import { ref } from "vue";
 import type { screensArray } from "./types/screensArray";
 import type { Range } from "./types/screensRange";
@@ -10,9 +9,7 @@ import Main from "../../screens/MainScreen/MainScreen.vue";
 type T = Range<0, typeof screens.length>;
 
 const screens: screensArray = [Main, Advantages];
-let screensRange = ref<T>(0);
-let currentScreen = ref<number>(screensRange.value);
-console.log(screens);
+let currentScreen = ref<T>(0);
 </script>
 
 <template>
