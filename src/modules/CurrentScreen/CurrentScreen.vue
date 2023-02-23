@@ -1,16 +1,18 @@
 <script setup lang="ts">
+import type { Component } from "vue";
 import { ref } from "vue";
 import type { screensType } from "./types/screensType";
+import type { Range } from "./types/screensRange";
 import ScreenContainer from "@/components/ScreenContainer/ScreenContainer.vue";
 import Advantages from "../../screens/AdvantagesScreen/AdvantagesScreen.vue";
 import Main from "../../screens/MainScreen/MainScreen.vue";
 
-let currentScreen = ref<string>("Main");
+type T = Range<0, typeof screens.length>;
 
-const screens: screensType = {
-  Advantages,
-  Main,
-};
+const screens: screensType = [Main, Advantages];
+let screensRange = ref<T>(0);
+let currentScreen = ref<number>(screensRange.value);
+console.log(screens);
 </script>
 
 <template>
