@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import AnimatedScreenContainer from "@/utils/animations/animatedScreenContainer.vue";
+import ScreenContainer from "@/components/ScreenContainer/ScreenContainer.vue";
 </script>
 
 <template>
-  <AnimatedScreenContainer>
+  <ScreenContainer>
     <div :class="$style.test"></div>
-  </AnimatedScreenContainer>
+  </ScreenContainer>
 </template>
 
 <style module lang="scss">
