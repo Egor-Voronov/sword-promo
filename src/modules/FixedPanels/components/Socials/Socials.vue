@@ -1,10 +1,10 @@
 <script lang="ts" setup>
 import Social from "./ui/Social.vue";
-import type { SocialsType } from "./types/SocialsType";
+import type { socialsType } from "./types/socialsType";
 import { ref } from "vue";
 
 let id = 0;
-const socialsList = ref<SocialsType[]>([
+const socialsList = ref<socialsType[]>([
   { title: "gh", href: "https://github.com/Egor-Voronov", id: id++ },
   { title: "tg", href: "https://t.me/Egor_Voronov_Dev", id: id++ },
   { title: "ln", href: "https://linkedin.com", id: id++ },

@@ -1,4 +1,4 @@
-export interface SocialsType {
+export interface socialsType {
   title: string;
   href: string;
   id: number;
