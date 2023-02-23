@@ -13,16 +13,22 @@ let currentScreen = ref<T>(0);
 
 const handleInput = (event: WheelEvent | KeyboardEvent) => {
   if (event.type === "wheel") {
-    event.preventDefault();
-    currentScreen.value += (event as WheelEvent).deltaY > 0 ? 1 : -1;
+    const newScreen =
+      currentScreen.value + ((event as WheelEvent).deltaY > 0 ? 1 : -1);
+    currentScreen.value = Math.min(
+      Math.max(newScreen, 0),
+      screens.length - 1
+    ) as T;
   }
 
   if (event.type === "keydown") {
     if ((event as KeyboardEvent).code === "ArrowDown") {
-      currentScreen.value--;
+      const newScreen = currentScreen.value - 1;
+      currentScreen.value = Math.max(newScreen, 0) as T;
     }
     if ((event as KeyboardEvent).code === "ArrowUp") {
-      currentScreen.value++;
+      const newScreen = currentScreen.value + 1;
+      currentScreen.value = Math.min(newScreen, screens.length - 1) as T;
     }
   }
 };
