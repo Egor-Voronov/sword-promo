@@ -11,15 +11,17 @@ type T = Range<0, typeof screens.length>;
 const screens: screensArray = [Main, Advantages];
 let currentScreen = ref<T>(0);
 
-const handleInput = (event) => {
+const handleInput = (event: WheelEvent | KeyboardEvent) => {
   if (event.type === "wheel") {
-    currentScreen.value += event.deltaY > 0 ? 1 : -1;
+    event.preventDefault();
+    currentScreen.value += (event as WheelEvent).deltaY > 0 ? 1 : -1;
   }
 
   if (event.type === "keydown") {
-    if (event.code === "ArrowDown") {
+    if ((event as KeyboardEvent).code === "ArrowDown") {
       currentScreen.value--;
-    } else if (event.code === "ArrowUp") {
+    }
+    if ((event as KeyboardEvent).code === "ArrowUp") {
       currentScreen.value++;
     }
   }
