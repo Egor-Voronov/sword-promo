@@ -48,7 +48,7 @@ const debouncedHandleScroll = useDebounceFn(
   (event: WheelEvent | KeyboardEvent) => {
     handleScroll(event);
   },
-  400
+  100
 );
 
 onMounted(() => {
@@ -63,7 +63,9 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <ScreenContainer ref="targetEl">
-    <component :is="screens[currentScreen]" />
+  <ScreenContainer>
+    <div ref="targetEl">
+      <component :is="screens[currentScreen]" />
+    </div>
   </ScreenContainer>
 </template>
