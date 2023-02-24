@@ -1,8 +1,8 @@
 import { useMotion } from "@vueuse/motion";
 import type { Ref } from "vue";
 
-export const screenAppear = (targetEl: Ref<HTMLDivElement>) => {
-  useMotion(targetEl, {
+export const screenAppear = (targetEl: Ref) => {
+  useMotion(targetEl.value, {
     initial: {
       opacity: 0,
       y: 300,

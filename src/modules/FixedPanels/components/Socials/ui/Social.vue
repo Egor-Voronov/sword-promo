@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 import type { PropType } from "vue";
-import type { SocialsType } from "../types/SocialsType";
+import type { socialsType } from "../types/socialsType";
 
 const props = defineProps({
   socials: {
     required: true,
-    type: Array as PropType<SocialsType[]>,
+    type: Array as PropType<socialsType[]>,
   },
 });
 </script>
