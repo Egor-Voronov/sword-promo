@@ -28,8 +28,19 @@ const handleScroll = (event: WheelEvent | KeyboardEvent) => {
   }
 
   if (newScreen !== undefined && newScreen !== currentScreen.value) {
-    currentScreen.value = Math.max(0, Math.min(newScreen, screens.length - 1));
-    screenAppear(targetEl!);
+    if (newScreen >= 0 && newScreen < screens.length) {
+      if (newScreen > currentScreen.value) {
+        screenAppear({ targetEl: targetEl, enterY: -300 });
+      }
+      if (newScreen < currentScreen.value) {
+        screenAppear({ targetEl: targetEl, enterY: 300 });
+      }
+
+      currentScreen.value = Math.max(
+        0,
+        Math.min(newScreen, screens.length - 1)
+      );
+    }
   }
 };
 
