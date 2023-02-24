@@ -31,7 +31,6 @@
   "skipLibCheck": true,
   "noFallthroughCasesInSwitch": true,
   "noImplicitOverride": true,
-  //  "downLevelIterator": true - чтобы сет заспредить и т.д.
   "references": [
     {
       "path": "./tsconfig.config.json"
