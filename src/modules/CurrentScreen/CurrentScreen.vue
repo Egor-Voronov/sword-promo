@@ -15,9 +15,12 @@ const handleScroll = (event: WheelEvent | KeyboardEvent) => {
   let newScreen: number | undefined;
 
   if (event.type === "wheel") {
-    const delta = (event as WheelEvent).deltaY;
-    if ((event as WheelEvent).deltaMode === WheelEvent.DOM_DELTA_PIXEL) {
-      let newScreen = currentScreen.value + Math.sign(delta);
+    const deltaY = (event as WheelEvent).deltaY;
+    if (
+      (event as WheelEvent).deltaMode === WheelEvent.DOM_DELTA_PIXEL &&
+      deltaY !== 0
+    ) {
+      let newScreen = currentScreen.value + Math.sign(deltaY);
       if (newScreen !== undefined && newScreen !== currentScreen.value) {
         if (newScreen >= 0 && newScreen < screens.length) {
           if (newScreen > currentScreen.value) {
