@@ -4,11 +4,11 @@ import { screenAppear } from "./screenAppear";
 
 // Define handleScroll function which takes an object of type handleScrollArgs as an argument
 const handleScroll = ({
-  event,
-  targetEl,
-  SCREENS,
-  currentScreen,
-}: HandleScrollArgs) => {
+                        event,
+                        targetEl,
+                        SCREENS,
+                        currentScreen,
+                      }: HandleScrollArgs) => {
   let newScreen: number | undefined;
   const DELTA_Y = (event as WheelEvent).deltaY;
 

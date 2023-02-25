@@ -1,18 +1,12 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref } from "vue";
-import type { ScreensArray } from "./types/ScreensArray";
+import { onMounted, onUnmounted } from "vue";
 import ScreenContainer from "@/components/ScreenContainer/ScreenContainer.vue";
-import { debouncedHandleScroll } from "@/utils/animations/screenScroll";
-import Advantages from "../AdvantagesScreen/AdvantagesScreen.vue";
-import Main from "../MainScreen/MainScreen.vue";
+import { useScreensState } from "@/store/screens";
+import { useHandleScroll } from "@/utils/animations/useScreenScroll";
 
-const SCREENS: ScreensArray = [Main, Advantages];
-const currentScreen = ref(0);
-const targetEl = ref<HTMLDivElement>();
-
-const useHandleScroll = (event: WheelEvent | KeyboardEvent) => {
-  debouncedHandleScroll({ event, targetEl, SCREENS, currentScreen });
-};
+const SCREENS = useScreensState().SCREENS.value;
+const currentScreen = useScreensState().currentScreen;
+const targetEl = useScreensState().targetEl;
 
 onMounted(() => {
   window.addEventListener("wheel", useHandleScroll);
