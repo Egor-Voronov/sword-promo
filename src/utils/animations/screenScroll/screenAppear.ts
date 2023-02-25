@@ -1,7 +1,7 @@
 import { useMotion } from "@vueuse/motion";
-import type { screenAppearArgs } from "./types/screenAppearArgs";
+import type { ScreenAppearArgs } from "./types/ScreenAppearArgs";
 
-export const screenAppear = ({ targetEl, enterY }: screenAppearArgs) => {
+export const screenAppear = ({ targetEl, enterY }: ScreenAppearArgs) => {
   useMotion(targetEl.value, {
     initial: {
       delay: 100,

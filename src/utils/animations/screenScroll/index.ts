@@ -1,4 +1,4 @@
-import type { handleScrollArgs } from "./types/handleScrollArgs";
+import type { HandleScrollArgs } from "./types/HandleScrollArgs";
 import { useDebounceFn } from "@vueuse/core";
 import { screenAppear } from "./screenAppear";
 
@@ -6,20 +6,20 @@ import { screenAppear } from "./screenAppear";
 const handleScroll = ({
   event,
   targetEl,
-  screens,
+  SCREENS,
   currentScreen,
-}: handleScrollArgs) => {
+}: HandleScrollArgs) => {
   let newScreen: number | undefined;
-  const deltaY = (event as WheelEvent).deltaY;
+  const DELTA_Y = (event as WheelEvent).deltaY;
 
   switch (event.type) {
     case "wheel":
       // If the event type is wheel, check deltaMode and deltaY values to determine newScreen
       if (
         (event as WheelEvent).deltaMode === WheelEvent.DOM_DELTA_PIXEL &&
-        deltaY !== 0
+        DELTA_Y !== 0
       ) {
-        newScreen = currentScreen.value + Math.sign(deltaY);
+        newScreen = currentScreen.value + Math.sign(DELTA_Y);
       }
       break;
     case "keydown":
@@ -40,7 +40,7 @@ const handleScroll = ({
     newScreen !== undefined &&
     newScreen !== currentScreen.value &&
     newScreen >= 0 &&
-    newScreen < screens.length
+    newScreen < SCREENS.length
   ) {
     // If newScreen is valid, call the screenAppear function with appropriate parameters
     screenAppear({
@@ -48,16 +48,16 @@ const handleScroll = ({
       enterY: newScreen > currentScreen.value ? -300 : 300,
     });
     // Update currentScreen value to newScreen
-    currentScreen.value = Math.max(0, Math.min(newScreen, screens.length - 1));
+    currentScreen.value = Math.max(0, Math.min(newScreen, SCREENS.length - 1));
   }
 };
 
 export const debouncedHandleScroll = useDebounceFn(
-  ({ event, targetEl, screens, currentScreen }: handleScrollArgs) => {
+  ({ event, targetEl, SCREENS, currentScreen }: HandleScrollArgs) => {
     handleScroll({
       event,
       targetEl,
-      screens,
+      SCREENS,
       currentScreen,
     });
   },

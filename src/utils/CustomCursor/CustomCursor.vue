@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, ref } from "vue";
-import type { axisClients } from "@/utils/CustomCursor/types/axisClients";
+import type { AxisClients } from "@/utils/CustomCursor/types/AxisClients";
 
 const pos = ref({ x: 0, y: 0 });
 const cursor = computed(() => ({
@@ -8,7 +8,7 @@ const cursor = computed(() => ({
   left: `${pos.value.x}px`,
 }));
 
-function onMousemove({ clientX: x, clientY: y }: axisClients) {
+function onMousemove({ clientX: x, clientY: y }: AxisClients) {
   pos.value = { x, y };
 }
 

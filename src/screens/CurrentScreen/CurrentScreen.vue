@@ -1,19 +1,19 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from "vue";
-import type { screensArray } from "@/modules/CurrentScreen/types/screensArray";
+import type { ScreensArray } from "./types/ScreensArray";
 import ScreenContainer from "@/components/ScreenContainer/ScreenContainer.vue";
 import { debouncedHandleScroll } from "@/utils/animations/screenScroll";
-import Advantages from "../../screens/AdvantagesScreen/AdvantagesScreen.vue";
-import Main from "../../screens/MainScreen/MainScreen.vue";
+import Advantages from "../AdvantagesScreen/AdvantagesScreen.vue";
+import Main from "../MainScreen/MainScreen.vue";
 
-const screens: screensArray = [Main, Advantages];
+const SCREENS: ScreensArray = [Main, Advantages];
 const currentScreen = ref(0);
+const targetEl = ref<HTMLDivElement>();
 
 const useHandleScroll = (event: WheelEvent | KeyboardEvent) => {
-  debouncedHandleScroll({ event, targetEl, screens, currentScreen });
+  debouncedHandleScroll({ event, targetEl, SCREENS, currentScreen });
 };
 
-const targetEl = ref<HTMLDivElement>();
 onMounted(() => {
   window.addEventListener("wheel", useHandleScroll);
   window.addEventListener("keydown", useHandleScroll);
@@ -28,7 +28,7 @@ onUnmounted(() => {
 <template>
   <ScreenContainer>
     <div ref="targetEl">
-      <component :is="screens[currentScreen]" />
+      <component :is="SCREENS[currentScreen]" />
     </div>
   </ScreenContainer>
 </template>

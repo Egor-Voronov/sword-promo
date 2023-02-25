@@ -1,4 +1,4 @@
-export interface axisClients {
+export interface AxisClients {
   clientX: number;
   clientY: number;
 }

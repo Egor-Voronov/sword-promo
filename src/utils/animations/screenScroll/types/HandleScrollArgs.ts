@@ -2,9 +2,9 @@ import type { Component, Ref } from "vue";
 
 export type event = WheelEvent | KeyboardEvent;
 
-export interface handleScrollArgs {
+export interface HandleScrollArgs {
   event: event;
   targetEl: Ref;
-  screens: Array<Component>;
+  SCREENS: Array<Component>;
   currentScreen: Ref;
 }
