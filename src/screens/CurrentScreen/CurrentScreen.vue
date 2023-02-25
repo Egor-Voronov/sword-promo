@@ -2,11 +2,14 @@
 import { onMounted, onUnmounted } from "vue";
 import ScreenContainer from "@/components/ScreenContainer/ScreenContainer.vue";
 import { useScreensState } from "@/store/screens";
-import { useHandleScroll } from "@/utils/animations/useScreenScroll";
+import { debouncedHandleScroll } from "@/utils/animations/useScreenScroll";
 
 const SCREENS = useScreensState().SCREENS.value;
-const currentScreen = useScreensState().currentScreen;
-const targetEl = useScreensState().targetEl;
+const { targetEl, currentScreen } = useScreensState();
+
+const useHandleScroll = (event: WheelEvent | KeyboardEvent) => {
+  debouncedHandleScroll({ event, targetEl, SCREENS, currentScreen });
+};
 
 onMounted(() => {
   window.addEventListener("wheel", useHandleScroll);
