@@ -8,6 +8,7 @@ export const useScreensState = createGlobalState(() => {
   const SCREENS = computed(() => [Main, Advantages]);
   const currentScreen = ref(0);
   const targetEl = ref<HTMLDivElement>();
+  const SUPPORTED_LOCALES = computed(() => ["ru", "en"]);
 
   return { SCREENS, currentScreen, targetEl };
 });

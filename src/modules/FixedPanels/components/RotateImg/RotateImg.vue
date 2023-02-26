@@ -11,7 +11,7 @@ const currentScreen = computed(() => useScreensState().currentScreen.value);
   <img
     :class="$style.img"
     :src="rotateImg"
-    alt="rotate"
+    :alt="$t('fixedPanels.rotateImgAlt')"
     v-if="currentScreen !== SCREENS_LENGTH - 1"
   />
 </template>

@@ -1,7 +1,8 @@
 import { createI18n } from "vue-i18n";
 import en from "./locales/en.json";
 import ru from "./locales/ru.json";
-import { useCurrentLang } from "@/store/currentLanguage";
+import { useCurrentLang } from "@/store/languages";
+
 export default createI18n({
   locale: useCurrentLang().value,
   fallbackLocale: "en",
@@ -9,3 +10,11 @@ export default createI18n({
   globalInjection: true,
   messages: { en, ru },
 });
+
+// import {getSupportedLocales} from "@/store/languages"
+//
+// const translation = {
+//   get supportedL
+// }
+//
+// export default translation

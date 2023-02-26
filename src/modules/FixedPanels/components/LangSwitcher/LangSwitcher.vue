@@ -1,7 +1,18 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { computed } from "vue";
+import i18n from "@/utils/i18n";
+
+const locale = computed(() => i18n.global.locale.value);
+
+const switchLanguage = () => {
+  i18n.global.locale.value = locale.value === "ru" ? "en" : "ru";
+};
+</script>
 
 <template>
-  <button>ru</button>
+  <button @click="switchLanguage">
+    {{ locale }}
+  </button>
 </template>
 
 <style module lang="scss">
