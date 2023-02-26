@@ -1,11 +1,16 @@
 <script lang="ts" setup>
 import { computed } from "vue";
+import { useCurrentLang } from "@/store/languages";
 import i18n from "@/utils/i18n";
 
+const currentLang = useCurrentLang();
 const locale = computed(() => i18n.global.locale.value);
 
 const switchLanguage = () => {
-  i18n.global.locale.value = locale.value === "ru" ? "en" : "ru";
+  const newLang = currentLang.value === "ru" ? "en" : "ru";
+  currentLang.value = newLang;
+  i18n.global.locale.value = newLang;
+  document.querySelector("html")?.setAttribute("lang", newLang);
 };
 </script>
 

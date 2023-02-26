@@ -4,7 +4,7 @@ import ru from "./locales/ru.json";
 import { useCurrentLang } from "@/store/languages";
 
 export default createI18n({
-  locale: useCurrentLang().currentLang.value,
+  locale: useCurrentLang().value,
   fallbackLocale: "en",
   legacy: false,
   globalInjection: true,
