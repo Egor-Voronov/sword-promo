@@ -4,11 +4,9 @@ import Main from "@/screens/MainScreen/MainScreen.vue";
 import Advantages from "@/screens/AdvantagesScreen/AdvantagesScreen.vue";
 
 export const useScreensState = createGlobalState(() => {
-  // getters
   const SCREENS = computed(() => [Main, Advantages]);
   const currentScreen = ref(0);
   const targetEl = ref<HTMLDivElement>();
-  const SUPPORTED_LOCALES = computed(() => ["ru", "en"]);
 
   return { SCREENS, currentScreen, targetEl };
 });

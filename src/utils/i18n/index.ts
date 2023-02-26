@@ -4,17 +4,9 @@ import ru from "./locales/ru.json";
 import { useCurrentLang } from "@/store/languages";
 
 export default createI18n({
-  locale: useCurrentLang().value,
+  locale: useCurrentLang().currentLang.value,
   fallbackLocale: "en",
   legacy: false,
   globalInjection: true,
   messages: { en, ru },
 });
-
-// import {getSupportedLocales} from "@/store/languages"
-//
-// const translation = {
-//   get supportedL
-// }
-//
-// export default translation
