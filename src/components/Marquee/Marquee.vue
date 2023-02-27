@@ -23,7 +23,18 @@ const { marqueeOrientation } = props;
       ]"
     >
       <h2>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim minus
+        perferendis ullam? Architecto deserunt expedita hic ipsum necessitatibus
+        officiis qui repellat voluptas? Animi aspernatur autem consequatur
+        deserunt eum exercitationem fuga ipsam maxime molestiae obcaecati
+        officia officiis possimus, quis, sed sit tenetur vero? Delectus magnam
+        nam numquam perferendis voluptatibus! Ab amet asperiores, aspernatur
+        dignissimos doloremque ducimus earum fugit inventore maiores, modi
+        molestiae nemo nihil nulla pariatur, possimus quas recusandae
+        repellendus rerum sit ut! Adipisci architecto, dolores eos in iure,
+        magnam maxime neque porro provident qui, quia quod recusandae veritatis.
+        Accusamus ad dolor dolores excepturi exercitationem inventore magni nemo
+        nesciunt odio perspiciatis?
       </h2>
     </div>
   </div>
@@ -40,7 +51,6 @@ const { marqueeOrientation } = props;
 
   &TextContainer {
     width: 100%;
-    height: 100%;
   }
 
   &Horizontal {
