@@ -3,7 +3,7 @@ import Marquee from "@/components/Marquee/Marquee.vue";
 </script>
 
 <template>
-  <Marquee :class="$style.heroMarquee" marqueeOrientation="horizontal" />
+  <Marquee :class="$style.heroMarquee" />
 </template>
 
 <style module lang="scss">
