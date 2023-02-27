@@ -4,7 +4,7 @@ import type { SocialsType } from "../types/SocialsType";
 
 const props = defineProps({
   socials: {
-    required: true,
+    required: true as boolean,
     type: Array as PropType<SocialsType[]>,
   },
 });
