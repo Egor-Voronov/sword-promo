@@ -13,7 +13,14 @@ const marqueeStyles = computed(() => ({
 
 <template>
   <div :class="$style.marqueeBody" :style="marqueeStyles">
-    <div>
+    <div
+      :class="[
+        $style.marqueeTextContainer,
+        marqueeOrientation === 'horizontal'
+          ? $style.marqueeHorizontal
+          : $style.marqueeVertical,
+      ]"
+    >
       <h2>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci
       </h2>
@@ -22,8 +29,23 @@ const marqueeStyles = computed(() => ({
 </template>
 
 <style lang="scss" module>
-.marqueeBody {
-  margin: 30px auto;
-  border: 1px solid red;
+.marquee {
+  &Body {
+    margin: 30px auto;
+    border: 1px solid red;
+  }
+
+  &TextContainer {
+    width: 100%;
+    height: 100%;
+  }
+
+  &Horizontal {
+    animation: marqueeHorizontalScroll;
+  }
+
+  &Vertical {
+    animation: marqueeVerticalScroll;
+  }
 }
 </style>

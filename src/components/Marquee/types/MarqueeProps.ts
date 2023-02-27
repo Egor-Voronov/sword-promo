@@ -1,4 +1,4 @@
 export interface MarqueeProps {
   marqueeWidth: string;
-  marqueeOrientation: string;
+  marqueeOrientation: "horizontal" | "vertical";
 }
