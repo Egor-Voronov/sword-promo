@@ -1,13 +1,13 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div :class="$style.mainContainer">
+  <div :class="$style.heroContainer">
     <slot></slot>
   </div>
 </template>
 
 <style module lang="scss">
-.mainContainer {
+.heroContainer {
   display: flex;
   justify-content: center;
   align-items: center;
