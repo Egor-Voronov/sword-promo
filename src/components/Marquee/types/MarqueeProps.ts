@@ -1,4 +1,3 @@
-export interface MarqueeProps {
-  marqueeWidth: string;
-  marqueeOrientation: "horizontal" | "vertical";
-}
+import type { PropType } from "vue";
+
+export type MarqueeProps = PropType<"horizontal" | "vertical">;

@@ -25,6 +25,7 @@
 @include _CreateFont("europeNormal", "europedemi-normal.woff2", 400);
 @include _CreateFont("europeLight", "europe-normal.woff2", 400);
 
+/*------- FIXED PANELS FONTS -------*/
 %FixedPanelsBold {
   @extend %europeBold;
   text-transform: uppercase;
@@ -46,3 +47,4 @@
     letter-spacing: toRem(-2.5);
   }
 }
+/*------- HERO BLOCK FONTS -------*/

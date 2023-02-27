@@ -1,13 +1,13 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Marquee from "@/components/Marquee/Marquee.vue";
+</script>
 
 <template>
-  <div :class="$style.test"></div>
+  <Marquee :class="$style.heroMarquee" marqueeOrientation="horizontal" />
 </template>
 
 <style module lang="scss">
-.test {
-  width: 500px;
-  height: 500px;
-  background-color: red;
+.heroMarquee {
+  width: 100vw;
 }
 </style>

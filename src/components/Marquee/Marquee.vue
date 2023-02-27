@@ -1,18 +1,19 @@
 <script lang="ts" setup>
-import { computed } from "vue";
+import { defineProps } from "vue";
 import type { MarqueeProps } from "./types/MarqueeProps";
 
-const props = defineProps<MarqueeProps>();
+const props = defineProps({
+  marqueeOrientation: {
+    required: true as boolean,
+    type: String as MarqueeProps,
+  },
+});
 
-const { marqueeWidth, marqueeOrientation } = props;
-
-const marqueeStyles = computed(() => ({
-  maxWidth: marqueeWidth,
-}));
+const { marqueeOrientation } = props;
 </script>
 
 <template>
-  <div :class="$style.marqueeBody" :style="marqueeStyles">
+  <div :class="$style.marqueeBody">
     <div
       :class="[
         $style.marqueeTextContainer,
@@ -29,6 +30,8 @@ const marqueeStyles = computed(() => ({
 </template>
 
 <style lang="scss" module>
+@import "animations/marqueeScrolls";
+
 .marquee {
   &Body {
     margin: 30px auto;
@@ -41,7 +44,7 @@ const marqueeStyles = computed(() => ({
   }
 
   &Horizontal {
-    animation: marqueeHorizontalScroll;
+    animation: marqueeHorizontalScroll 5s linear infinite;
   }
 
   &Vertical {
