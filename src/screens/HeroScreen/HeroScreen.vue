@@ -1,9 +1,9 @@
-<script setup lang="ts">
-import HeroMarquee from "@/modules/HeroMarquee/HeroMarquee.vue";
+<script lang="ts" setup>
+import RunningLine from "@/components/RunningLine/RunningLine.vue";
 </script>
 
 <template>
-  <HeroMarquee />
+  <RunningLine />
 </template>
 
-<style module lang="scss"></style>
+<style lang="scss" module></style>

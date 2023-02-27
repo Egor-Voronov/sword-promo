@@ -41,6 +41,7 @@
 %FixedPanelsLight {
   @extend %europeNormal;
   text-transform: uppercase;
+  letter-spacing: toRem(-2.5);
 
   @include _desktop {
     font-size: toRem(25);
@@ -48,14 +49,14 @@
   }
 }
 /*------- HERO BLOCK FONTS -------*/
-%HeroMarquee {
+%RunningLine {
   @extend %europeBold;
   text-transform: uppercase;
-  font-size: toRemMob(100);
+  font-size: toRemMob(60);
   letter-spacing: toRemMob(-2);
 
   @include _desktop {
-    font-size: toRem(100);
+    font-size: toRem(120);
     letter-spacing: toRem(-1);
   }
 }
