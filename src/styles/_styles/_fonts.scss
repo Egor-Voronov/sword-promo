@@ -48,3 +48,14 @@
   }
 }
 /*------- HERO BLOCK FONTS -------*/
+%HeroMarquee {
+  @extend %europeBold;
+  text-transform: uppercase;
+  font-size: toRemMob(100);
+  letter-spacing: toRemMob(-2);
+
+  @include _desktop {
+    font-size: toRem(100);
+    letter-spacing: toRem(-1);
+  }
+}
