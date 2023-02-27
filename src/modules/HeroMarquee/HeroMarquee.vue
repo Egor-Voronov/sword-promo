@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import Marquee from "@/components/Marquee/Marquee.vue";
+import { randomize } from "@/utils/randomizeFn";
+import { useScreensGood } from "@/store/goods/index";
 </script>
 
 <template>

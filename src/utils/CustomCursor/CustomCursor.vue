@@ -8,9 +8,9 @@ const cursor = computed(() => ({
   left: `${pos.value.x}px`,
 }));
 
-function onMousemove({ clientX: x, clientY: y }: AxisClients) {
+const onMousemove = ({ clientX: x, clientY: y }: AxisClients) => {
   pos.value = { x, y };
-}
+};
 
 onMounted(() => document.addEventListener("mousemove", onMousemove));
 onUnmounted(() => document.removeEventListener("mousemove", onMousemove));
