@@ -1,13 +1,9 @@
 <script setup lang="ts">
-import Marquee from "@/components/Marquee/Marquee.vue";
+import HeroMarquee from "@/modules/HeroMarquee/HeroMarquee.vue";
 </script>
 
 <template>
-  <Marquee :class="$style.heroMarquee" />
+  <HeroMarquee />
 </template>
 
-<style module lang="scss">
-.heroMarquee {
-  width: 100vw;
-}
-</style>
+<style module lang="scss"></style>
