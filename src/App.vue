@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 import FixedPanels from "@/modules/FixedPanels/FixedPanels.vue";
-import CustomCursor from "@/utils/CustomCursor/CustomCursor.vue";
+// import CustomCursor from "@/utils/CustomCursor/CustomCursor.vue";
 import CurrentScreen from "@/screens/CurrentScreen/CurrentScreen.vue";
 </script>
 
 <template>
-  <CustomCursor />
+<!--  <CustomCursor />-->
   <FixedPanels />
   <CurrentScreen />
 </template>
