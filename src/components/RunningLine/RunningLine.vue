@@ -14,7 +14,7 @@ const randomTxt: string = randomize(
 </script>
 
 <template>
-  <Vue3Marquee :class="$style.RunningLine">
+  <Vue3Marquee :duration="30" :clone="true" :class="$style.RunningLine">
     {{ randomTxt }}
   </Vue3Marquee>
 </template>
