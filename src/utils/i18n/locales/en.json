@@ -4,6 +4,12 @@
     "rotateImgAlt": "can rotate",
     "scrollTip": "scroll"
   },
+  "goods": {
+    "sword": [
+      "uncompromising. cool. elegant. ",
+      "invincible. powerful. aggressive. "
+    ]
+  },
   "orderOffer": {
     "buyBtn": "buy for $89"
   }
