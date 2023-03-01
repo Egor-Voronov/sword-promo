@@ -19,7 +19,7 @@ onMounted(() => html?.setAttribute("lang", i18n.global.locale.value));
 
 <template>
   <button @click="switchLanguage">
-    {{ locale }}
+    {{ $t("fixedPanels.locale") }}
   </button>
 </template>
 
