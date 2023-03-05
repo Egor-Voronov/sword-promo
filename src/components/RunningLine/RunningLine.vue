@@ -3,12 +3,12 @@ import type { RunningLineTxts } from "./types/RunningLineTxts";
 import { Vue3Marquee } from "vue3-marquee";
 import "vue3-marquee/dist/style.css";
 import mockups from "./mockups/mockups.json";
-import { randomize } from "@/utils/randomizeFn";
+import { randomizeIndex } from "@/utils/randomizeFn";
 import { useCurrentGood } from "@/store/goods";
 
 const runningLineTxts = mockups as RunningLineTxts;
 
-const randomTxt: string = randomize(
+const randomTxt: string = randomizeIndex(
   runningLineTxts[useCurrentGood().currentGood.value]
 );
 </script>
@@ -22,6 +22,7 @@ const randomTxt: string = randomize(
 <style lang="scss" module>
 .RunningLine {
   width: 100vw;
+  height: toRem(150);
 
   @extend %RunningLine;
 }
