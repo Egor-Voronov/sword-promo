@@ -5,10 +5,11 @@
     "scrollTip": "scroll"
   },
   "goods": {
-    "sword": [
-      "uncompromising. cool. elegant. ",
-      "invincible. powerful. aggressive. "
-    ]
+    "sword": {
+      "name": "fencing sword",
+      "runningLine": "uncompromising. cold. elegant. ",
+      "description": ""
+    }
   },
   "orderOffer": {
     "buyBtn": "buy for $89"

@@ -29,5 +29,6 @@ button {
   border: none;
   @extend %FixedPanelsBold;
   pointer-events: auto;
+  width: toRem(40);
 }
 </style>
