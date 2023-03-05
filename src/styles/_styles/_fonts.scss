@@ -23,7 +23,7 @@
 
 @include _CreateFont("europeBold", "europe-bold.woff2", 900);
 @include _CreateFont("europeNormal", "europedemi-normal.woff2", 400);
-@include _CreateFont("europeLight", "europe-normal.woff2", 400);
+@include _CreateFont("interRegular", "Inter-Regular.ttf", 400);
 
 /*------- FIXED PANELS -------*/
 %FixedPanelsBold {
@@ -38,7 +38,7 @@
   }
 }
 
-%FixedPanelsLight {
+%FixedPanelsNormal {
   @extend %europeNormal;
   text-transform: uppercase;
   letter-spacing: toRem(-2.5);
@@ -48,6 +48,7 @@
     letter-spacing: toRem(-2.5);
   }
 }
+
 /*------- HERO SCREEN -------*/
 %RunningLine {
   @extend %europeBold;
@@ -60,6 +61,7 @@
     letter-spacing: toRem(-1);
   }
 }
+
 /*------- ADVANTAGES SCREEN -------*/
 %AdvantageTitle {
   @extend %europeNormal;
@@ -67,7 +69,17 @@
   letter-spacing: toRemMob(-2);
 
   @include _desktop {
-    font-size: toRem(15);
+    font-size: toRem(25);
     letter-spacing: toRem(-2);
+  }
+}
+
+%AdvantageDescription {
+  @extend %interRegular;
+  font-size: toRemMob(12);
+
+
+  @include _desktop {
+    font-size: toRem(15);
   }
 }
