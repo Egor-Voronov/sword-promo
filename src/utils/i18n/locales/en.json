@@ -7,9 +7,12 @@
     "sword": {
       "name": "fencing sword",
       "runningLine": "uncompromising. cold. elegant. ",
-      "advantages": {
-        "title": "Прочный",
-        "description1": "Reliable and durable tool for training and competition. The sword blade is made of durable materials, which ensures durability and accuracy of each blow. Ergonomic sword handle provides comfort and ease of use.",
+      "advantage1": {
+        "title1": "Solid",
+        "description1": "Reliable and durable tool for training and competition. The sword blade is made of durable materials, which ensures durability and accuracy of each blow. Ergonomic sword handle provides comfort and ease of use."
+      },
+      "advantage2": {
+        "title": "Meaningful",
         "description2": "An unsurpassedly durable tool for training and competition. The sword blade is made of high quality materials for maximum strength and durability. The sword has a unique design that provides perfect weight distribution and balance, ensuring comfort and control with every strike."
       }
     }
