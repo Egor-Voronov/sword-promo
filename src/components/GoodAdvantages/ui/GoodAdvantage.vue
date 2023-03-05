@@ -1,5 +1,14 @@
 <script setup lang="ts">
+import type { PropType } from "vue";
+import { defineProps } from "vue";
 import { useCurrentGood } from "@/store/goods";
+
+const props = defineProps({
+  num: {
+    required: true as boolean,
+    type: Number as PropType<number>,
+  },
+});
 
 const currGood = useCurrentGood().currentGood.value;
 </script>
@@ -7,10 +16,10 @@ const currGood = useCurrentGood().currentGood.value;
 <template>
   <div :class="$style.advantageContainer">
     <h2 :class="$style.advantageTitle">
-      {{ $t("goods.sword.advantage1.title") }}
+      {{ $t(`goods.${currGood}.advantages.advantage${num}.title`) }}
     </h2>
     <p :class="$style.advantageDescription">
-      {{ $t("goods.sword.advantage1.description") }}
+      {{ $t(`goods.${currGood}.advantages.advantage${num}.description`) }}
     </p>
   </div>
 </template>
@@ -22,9 +31,9 @@ const currGood = useCurrentGood().currentGood.value;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-
     text-align: start;
-    max-width: 95vw;
+
+    max-width: toRemMob(280);
 
     @include _desktop {
       max-width: toRem(500);

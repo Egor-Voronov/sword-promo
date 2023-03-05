@@ -3,7 +3,26 @@ import GoodAdvantage from "./ui/GoodAdvantage.vue";
 </script>
 
 <template>
-  <GoodAdvantage />
+  <div :class="$style.advantagesContainer">
+    <GoodAdvantage v-for="n in 2" :num="n" :key="n" />
+  </div>
 </template>
 
-<style module lang="scss"></style>
+<style module lang="scss">
+.advantages {
+  &Container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+
+    padding-bottom: toRemMob(45);
+    gap: toRemMob(10);
+
+    @include _desktop {
+      padding-bottom: toRem(50);
+      gap: toRem(100);
+    }
+  }
+}
+</style>

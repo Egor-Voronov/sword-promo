@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted } from "vue";
-import ScreenContainer from "./ScreenContainer/ScreenContainer.vue";
+
 import { useScreensState } from "@/store/screens";
 import { debouncedHandleScroll } from "./animations/useScreenScroll";
 
@@ -23,9 +23,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <ScreenContainer>
     <div ref="targetEl">
       <component :is="SCREENS[currentScreen]" />
     </div>
-  </ScreenContainer>
 </template>
