@@ -1,8 +1,7 @@
 {
   "fixedPanels": {
     "locale": "en",
-    "rotateImgAlt": "can rotate",
-    "scrollTip": "scroll"
+    "rotateImgAlt": "can rotate"
   },
   "goods": {
     "sword": {

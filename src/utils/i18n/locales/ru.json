@@ -1,8 +1,7 @@
 {
   "fixedPanels": {
     "locale": "ру",
-    "rotateImgAlt": "можно вращать",
-    "scrollTip": "прокрутка"
+    "rotateImgAlt": "можно вращать"
   },
   "goods": {
     "sword": {
