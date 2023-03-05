@@ -16,7 +16,7 @@
 }
 
 .panelContainer {
-  padding: toRemMob(40) toRemMob(20);
+  padding: toRemMob(20);
 
   display: flex;
   justify-content: space-between;
