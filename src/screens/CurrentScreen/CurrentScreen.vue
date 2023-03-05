@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted } from "vue";
-import ScreenContainer from "@/components/ScreenContainer/ScreenContainer.vue";
+import ScreenContainer from "./ScreenContainer/ScreenContainer.vue";
 import { useScreensState } from "@/store/screens";
 import { debouncedHandleScroll } from "./animations/useScreenScroll";
 
