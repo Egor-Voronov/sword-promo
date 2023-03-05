@@ -1,13 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import GoodAdvantage from "@/components/GoodAdvantages/ui/GoodAdvantage.vue";
+</script>
 
 <template>
-  <div :class="$style.test"></div>
+  <GoodAdvantage />
 </template>
 
-<style module lang="scss">
-.test {
-  width: 500px;
-  height: 500px;
-  background-color: blue;
-}
-</style>
+<style module lang="scss"></style>
