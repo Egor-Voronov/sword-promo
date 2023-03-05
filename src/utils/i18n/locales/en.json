@@ -19,7 +19,7 @@
       }
     }
   },
-  "orderOffer": {
-    "buyBtn": "buy for $89"
+  "preorder": {
+    "preorderBtn": "Pre-order"
   }
 }

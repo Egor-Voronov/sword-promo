@@ -1,10 +1,6 @@
 <script setup lang="ts">
-import { computed } from "vue";
-import { useScreensState } from "@/store/screens";
 import rotateImg from "~/img/FixedPanels/rotate-y-axis.svg";
 
-const SCREENS_LENGTH = computed(() => useScreensState().SCREENS.value.length);
-const currentScreen = computed(() => useScreensState().currentScreen.value);
 </script>
 
 <template>
@@ -12,7 +8,7 @@ const currentScreen = computed(() => useScreensState().currentScreen.value);
     :class="$style.img"
     :src="rotateImg"
     :alt="$t('fixedPanels.rotateImgAlt')"
-    v-if="currentScreen !== SCREENS_LENGTH - 1"
+
   />
 </template>
 

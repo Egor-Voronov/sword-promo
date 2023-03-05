@@ -78,8 +78,19 @@
   @extend %interRegular;
   font-size: toRemMob(10);
 
-
   @include _desktop {
     font-size: toRem(15);
+  }
+}
+
+/*------- PREORDER SCREEN -------*/
+%PreorderBtn {
+  @extend %europeNormal;
+  font-size: toRemMob(10);
+  letter-spacing: toRemMob(-1);
+
+  @include _desktop {
+    font-size: toRem(18);
+    letter-spacing: toRem(-1);
   }
 }

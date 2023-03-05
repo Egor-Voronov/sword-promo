@@ -16,11 +16,9 @@ import GoodAdvantage from "./ui/GoodAdvantage.vue";
     justify-content: center;
     align-items: baseline;
 
-    padding-bottom: toRemMob(45);
     gap: toRemMob(10);
 
     @include _desktop {
-      padding-bottom: toRem(50);
       gap: toRem(100);
     }
   }

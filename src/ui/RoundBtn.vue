@@ -1,0 +1,25 @@
+<template>
+  <button :class="$style.roundBtn">
+    {{ $t("preorder.preorderBtn") }}
+  </button>
+</template>
+
+<style module lang="scss">
+.roundBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @extend %PreorderBtn;
+  width: toRemMob(85);
+  height: toRemMob(85);
+  border-radius: 100%;
+  background-color: rgba(#fff, 0);
+  border: solid $black 0.5px;
+
+  @include _desktop {
+    width: toRem(175);
+    height: toRem(175);
+  }
+}
+</style>

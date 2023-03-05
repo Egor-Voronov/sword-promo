@@ -4,7 +4,7 @@ import GoodAdvantages from "@/components/GoodAdvantages/GoodAdvantages.vue";
 
 <template>
   <div :class="$style.advantages">
-    <GoodAdvantages />
+    <GoodAdvantages :class="$style.advantagesBlock" />
   </div>
 </template>
 
@@ -15,5 +15,13 @@ import GoodAdvantages from "@/components/GoodAdvantages/GoodAdvantages.vue";
   align-items: flex-end;
   width: 100%;
   height: 100vh;
+
+  &Block {
+    padding-bottom: toRemMob(45);
+
+    @include _desktop {
+      padding-bottom: toRem(50);
+    }
+  }
 }
 </style>
