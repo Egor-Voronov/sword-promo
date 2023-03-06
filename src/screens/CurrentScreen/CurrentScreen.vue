@@ -23,7 +23,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <div ref="targetEl">
-      <component :is="SCREENS[currentScreen]" />
-    </div>
+  <div ref="targetEl">
+    <component :is="SCREENS[currentScreen]" />
+  </div>
 </template>
