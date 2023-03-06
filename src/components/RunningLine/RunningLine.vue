@@ -20,6 +20,6 @@ const currGood = computed(() => {
   width: 100vw;
   height: toRem(150);
 
-  @extend %RunningLine;
+  @extend %RunningLineFont;
 }
 </style>

@@ -41,7 +41,7 @@ const currGood = useCurrentGood().currentGood.value;
   }
 
   &Title {
-    @extend %AdvantageTitle;
+    @extend %AdvantageTitleFont;
     margin-bottom: toRemMob(5);
 
     @include _desktop {
@@ -50,7 +50,7 @@ const currGood = useCurrentGood().currentGood.value;
   }
 
   &Description {
-    @extend %AdvantageDescription;
+    @extend %AdvantageDescriptionFont;
   }
 }
 </style>

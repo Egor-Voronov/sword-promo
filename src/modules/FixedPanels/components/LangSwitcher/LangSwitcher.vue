@@ -27,7 +27,7 @@ onMounted(() => html?.setAttribute("lang", i18n.global.locale.value));
 button {
   background-color: rgba(#fff, 0);
   border: none;
-  @extend %FixedPanelsBold;
+  @extend %FixedPanelsBoldFont;
   pointer-events: auto;
   width: toRem(40);
 }

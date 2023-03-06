@@ -15,6 +15,6 @@ import Title from "./Title/Title.vue";
 .bottomPanel {
   bottom: 0;
 
-  @extend %FixedPanelsNormal;
+  @extend %FixedPanelsNormalFont;
 }
 </style>

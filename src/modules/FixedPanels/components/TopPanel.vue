@@ -16,6 +16,6 @@ import LangSwitcher from "./LangSwitcher/LangSwitcher.vue";
 <style lang="scss" module>
 .topPanel {
   top: 0;
-  @extend %FixedPanelsBold;
+  @extend %FixedPanelsBoldFont;
 }
 </style>

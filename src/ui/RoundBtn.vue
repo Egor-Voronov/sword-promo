@@ -10,12 +10,16 @@
   justify-content: center;
   align-items: center;
 
-  @extend %PreorderBtn;
+  @extend %PreorderBtnFont;
   width: toRemMob(85);
   height: toRemMob(85);
   border-radius: 100%;
   background-color: rgba(#fff, 0);
   border: solid $black 0.5px;
+
+  &:hover {
+    text-decoration-line: underline;
+  }
 
   @include _desktop {
     width: toRem(175);
