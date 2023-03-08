@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import GoodAdvantages from "@/components/GoodAdvantages/GoodAdvantages.vue";
+import MobileGoodAdvantages from "@/components/GoodAdvantages/MobileGoodAdvantages/MobileGoodAdvantages.vue";
 </script>
 
 <template>
   <div :class="$style.advantages">
-    <GoodAdvantages :class="$style.advantagesBlock" />
+    <MobileGoodAdvantages :class="$style.advantagesBlock" />
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import GoodAdvantage from "./ui/GoodAdvantage.vue";
+import GoodAdvantage from "./ui/MobileGoodAdvantage.vue";
 </script>
 
 <template>

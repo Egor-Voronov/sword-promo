@@ -1,7 +1,7 @@
 <template>
   <div :class="$style.fixedPanel">
     <div :class="$style.panelContainer">
-      <slot></slot>
+      <slot />
     </div>
   </div>
 </template>

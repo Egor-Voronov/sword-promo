@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import RunningLine from "@/components/RunningLine/RunningLine.vue";
+import RunningLine from "@/components/RunningLine/TheRunningLine.vue";
 </script>
 
 <template>

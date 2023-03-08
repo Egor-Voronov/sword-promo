@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import FixedPanel from "../ui/FixedPanel.vue";
-import CurrentGood from "./CurrentGood/CurrentGood.vue";
-import Title from "./Title/Title.vue";
+import CurrentGood from "./CurrentGoodTxt/TheCurrentGoodTxt.vue";
+import Title from "./Title/TheTitle.vue";
 </script>
 
 <template>

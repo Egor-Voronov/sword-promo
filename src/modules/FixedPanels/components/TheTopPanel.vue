@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import FixedPanel from "../ui/FixedPanel.vue";
-import Socials from "./Socials/Socials.vue";
-import RotateImg from "./RotateImg/RotateImg.vue";
-import LangSwitcher from "./LangSwitcher/LangSwitcher.vue";
+import Socials from "./Socials/TheSocials.vue";
+import RotateImg from "./RotateImg/TheRotateImg.vue";
+import LangSwitcher from "./LangSwitcher/TheLangSwitcher.vue";
 </script>
 
 <template>

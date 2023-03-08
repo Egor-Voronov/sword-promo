@@ -1,6 +1,6 @@
 <template>
   <button :class="$style.roundBtn">
-    {{ $t("preorder.preorderBtn") }}
+    <slot />
   </button>
 </template>
 

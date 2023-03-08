@@ -1,11 +1,13 @@
 <script lang="ts" setup>
-import RoundBtn from "@/ui/RoundBtn.vue";
+import BaseRoundBtn from "@/ui/BaseRoundBtn.vue";
 </script>
 
 <template>
   <div :class="$style.preorder">
     <a href="mailto:egor.voronov.dev@gmail.com" :class="$style.preorderBtn">
-      <RoundBtn />
+      <BaseRoundBtn>
+        {{ $t("preorder.preorderBtn") }}
+      </BaseRoundBtn>
     </a>
   </div>
 </template>
