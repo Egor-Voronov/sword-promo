@@ -1,13 +1,9 @@
 <script lang="ts" setup>
-import type { PropType } from "vue";
 import type { SocialsType } from "../types/SocialsType";
 
-const props = defineProps({
-  socials: {
-    required: true as boolean,
-    type: Array as PropType<SocialsType[]>,
-  },
-});
+const props = defineProps<{
+  socials: SocialsType[];
+}>();
 </script>
 
 <template>

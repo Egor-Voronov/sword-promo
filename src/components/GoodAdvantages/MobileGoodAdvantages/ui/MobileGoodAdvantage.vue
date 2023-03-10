@@ -1,14 +1,10 @@
 <script setup lang="ts">
-import type { PropType } from "vue";
 import { defineProps } from "vue";
 import { useCurrentGood } from "@/store/goods";
 
-const props = defineProps({
-  num: {
-    required: true as boolean,
-    type: Number as PropType<number>,
-  },
-});
+const props = defineProps<{
+  num: number;
+}>();
 
 const currGood = useCurrentGood().currentGood.value;
 </script>
