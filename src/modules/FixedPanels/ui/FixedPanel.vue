@@ -1,9 +1,9 @@
 <template>
-  <div :class="$style.fixedPanel">
+  <nav :class="$style.fixedPanel">
     <div :class="$style.panelContainer">
       <slot />
     </div>
-  </div>
+  </nav>
 </template>
 
 <style lang="scss" module>

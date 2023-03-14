@@ -1,22 +1,23 @@
 <script setup lang="ts">
 import rotateImg from "~/img/FixedPanels/rotate-y-axis.svg";
 
+const imgUrl = `url("${rotateImg}")`;
 </script>
 
 <template>
-  <img
-    :class="$style.img"
-    :src="rotateImg"
-    :alt="$t('fixedPanels.rotateImgAlt')"
-
-  />
+  <span :class="$style.rotateImg" />
 </template>
 
 <style lang="scss" module>
-img {
+.rotateImg {
   pointer-events: auto;
-  width: toRemMob(15);
-  height: toRemMob(15);
+  width: toRemMob(20);
+  height: toRemMob(20);
+
+  background-image: v-bind(imgUrl);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 
   // pixel perfect styles
   position: relative;
