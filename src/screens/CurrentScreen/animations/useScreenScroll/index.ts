@@ -61,5 +61,5 @@ export const debouncedHandleScroll = useDebounceFn(
       currentScreen,
     });
   },
-  100
+  50
 );
