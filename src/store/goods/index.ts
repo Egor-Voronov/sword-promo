@@ -1,6 +1,6 @@
 import { createGlobalState } from "@vueuse/core";
 import { computed } from "vue";
-import { randomizeIndex } from "@/utils/randomize";
+import { randomizeIndex } from "@//utils";
 
 const GOODS = computed(() => ["sword"]);
 
