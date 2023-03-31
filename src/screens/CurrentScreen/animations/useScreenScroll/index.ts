@@ -52,7 +52,7 @@ const handleScroll = ({
   }
 };
 
-export const debouncedHandleScroll = useDebounceFn(
+export const useDebouncedHandleScroll = useDebounceFn(
   ({ event, targetEl, SCREENS, currentScreen }: HandleScrollArgs) => {
     handleScroll({
       event,
