@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, onMounted } from "vue";
+import { onMounted } from "vue";
 import { useCurrentLang } from "@/store/languages";
 import i18n from "@/utils/i18n";
 
