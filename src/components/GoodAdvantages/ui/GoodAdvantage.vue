@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { useCurrentGood } from "@/store/goods";
 
 const props = defineProps<{
@@ -19,7 +19,7 @@ const currGood = useCurrentGood().currentGood.value;
   </div>
 </template>
 
-<style module lang="scss">
+<style lang="scss" module>
 .advantage {
   &Container {
     display: flex;
