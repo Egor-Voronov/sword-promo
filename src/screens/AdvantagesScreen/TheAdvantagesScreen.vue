@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import MobileGoodAdvantages from "@/components/GoodAdvantages/MobileGoodAdvantages/TheMobileGoodAdvantages.vue";
+import MobileGoodAdvantages from "@/components/GoodAdvantages/TheGoodAdvantages.vue";
 </script>
 
 <template>
