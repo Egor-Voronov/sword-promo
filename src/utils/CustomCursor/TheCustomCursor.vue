@@ -23,32 +23,31 @@ onUnmounted(() => document.removeEventListener("mousemove", onMousemove));
 
 <style module lang="scss">
 @include _desktop {
-  .innerCursor {
+  %baseCursor {
     position: fixed;
     left: toRem(10);
-    width: toRem(10);
-    height: toRem(10);
     transform: translate(-50%, -50%);
-    background-color: $gray;
     mix-blend-mode: difference;
     border-radius: 50%;
     pointer-events: none;
+  }
+
+  .innerCursor {
+    @extend %baseCursor;
+    width: toRem(10);
+    height: toRem(10);
+    background-color: $gray;
     transition: width 0.5s, height 0.5s;
     z-index: 990;
   }
 
   .outerCursor {
-    position: fixed;
-    left: toRem(10);
+    @extend %baseCursor;
     width: toRem(20);
     height: toRem(20);
-    transform: translate(-50%, -50%);
     border: toRem(1) solid #fff;
-    mix-blend-mode: difference;
-    border-radius: 50%;
-    z-index: 999;
     transition: 0.1s;
-    pointer-events: none;
+    z-index: 999;
   }
 }
 </style>
