@@ -1,6 +1,6 @@
 import type { HandleScrollArgs } from "./types/HandleScrollArgs";
 import { useDebounceFn } from "@vueuse/core";
-import { screenAppear } from "./screenAppear";
+import { useScreenAppear } from "./useScreenAppear";
 
 // Define handleScroll function which takes an object of type handleScrollArgs as an argument
 const handleScroll = ({
@@ -43,7 +43,7 @@ const handleScroll = ({
     newScreen < SCREENS.length
   ) {
     // If newScreen is valid, call the screenAppear function with appropriate parameters
-    screenAppear({
+    useScreenAppear({
       targetEl: targetEl,
       enterY: newScreen > currentScreen.value ? -300 : 300,
     });
