@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { useCurrentGood } from "@/store/goods";
 
-const props = defineProps<{
+defineProps<{
   num: number;
 }>();
 

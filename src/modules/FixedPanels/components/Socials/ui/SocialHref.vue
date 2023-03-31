@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import type { SocialsType } from "../types/SocialsType";
 
-const props = defineProps<{
+defineProps<{
   socials: SocialsType[];
 }>();
 </script>
