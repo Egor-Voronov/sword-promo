@@ -7,8 +7,8 @@ const props = defineProps<{
 </script>
 
 <template>
-  <a :href="social.href" :key="social.id" v-for="social in socials">
-    {{ social.title }}
+  <a :href="socialHref.href" :key="socialHref.id" v-for="socialHref in socials">
+    {{ socialHref.title }}
   </a>
 </template>
 

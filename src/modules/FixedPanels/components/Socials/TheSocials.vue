@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import Social from "./ui/Social.vue";
+import SocialHref from "./ui/SocialHref.vue";
 import type { SocialsType } from "./types/SocialsType";
 import { ref } from "vue";
 
@@ -13,7 +13,7 @@ const socialsList = ref<SocialsType[]>([
 
 <template>
   <div :class="$style.socials">
-    <Social :socials="socialsList" />
+    <SocialHref :socials="socialsList" />
   </div>
 </template>
 
