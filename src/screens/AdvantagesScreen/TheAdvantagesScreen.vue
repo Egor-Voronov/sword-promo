@@ -17,10 +17,11 @@ import MobileGoodAdvantages from "@/components/GoodAdvantages/TheGoodAdvantages.
   height: 100vh;
 
   &Block {
-    padding-bottom: toRemMob(45);
+    position: relative;
+    top: toRemMob(-45);
 
     @include _desktop {
-      padding-bottom: toRem(50);
+      top: toRem(-50);
     }
   }
 }

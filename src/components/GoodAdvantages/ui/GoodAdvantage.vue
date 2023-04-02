@@ -37,10 +37,11 @@ const currGood = useCurrentGood().currentGood.value;
 
   &Title {
     @extend %AdvantageTitleFont;
-    margin-bottom: toRemMob(5);
+    position: relative;
+    top: toRemMob(-5);
 
     @include _desktop {
-      margin-bottom: toRem(5);
+      top: toRem(-5);
     }
   }
 

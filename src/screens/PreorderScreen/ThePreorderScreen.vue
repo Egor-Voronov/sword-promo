@@ -21,8 +21,9 @@ import BaseRoundBtn from "@/ui/BaseRoundBtn.vue";
   height: 100vh;
 
   &Btn {
+    position: relative;
     pointer-events: auto;
-    margin-bottom: toRem(150);
+    top: toRem(-150);
   }
 }
 </style>
