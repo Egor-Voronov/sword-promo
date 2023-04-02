@@ -18,7 +18,9 @@
   border: solid $black 0.5px;
 
   &:hover {
-    text-decoration-line: underline;
+    @media #{$mouse-device} {
+      text-decoration-line: underline;
+    }
   }
 
   @include _desktop {
