@@ -19,7 +19,7 @@ a {
   text-decoration: none;
 
   &:hover {
-    @media #{$mouse-device} {
+    @media #{$mouseDevice} {
       color: $black;
       text-decoration: none;
     }

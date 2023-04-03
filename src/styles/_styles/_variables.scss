@@ -5,17 +5,17 @@ $gray: #f0f0f0;
 $black: #1e1e1e;
 
 /*------- BREAKPOINTS -------*/
-$breakpoint-desktop: 820px;
-$mouse-device: '(hover: hover) and (pointer: fine)';
+$breakpointDesktop: 820px;
+$mouseDevice: '(hover: hover) and (pointer: fine)';
 
 @mixin _desktop {
-  @media (min-width: $breakpoint-desktop) {
+  @media (min-width: $breakpointDesktop) {
     @content;
   }
 }
 
 @mixin _mobile {
-  @media (max-width: $breakpoint-desktop) {
+  @media (max-width: $breakpointDesktop) {
     @content;
   }
 }
