@@ -1,6 +1,6 @@
 import type { HandleScrollArgs } from "./types/HandleScrollArgs";
 import { useDebounceFn } from "@vueuse/core";
-import { useScreenAppear } from "./useScreenAppear";
+import { useScreenAppear } from "@/screens/CurrentScreen/useScreenScroll/animations/useScreenAppear";
 
 // Define handleScroll function which takes an object of type handleScrollArgs as an argument
 const handleScroll = ({

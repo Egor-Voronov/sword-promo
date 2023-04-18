@@ -2,7 +2,7 @@
 import { onMounted, onUnmounted } from "vue";
 
 import { useScreensState } from "@/store/screens";
-import { useDebouncedHandleScroll } from "./animations/useScreenScroll";
+import { useDebouncedHandleScroll } from "./useScreenScroll";
 
 const SCREENS = useScreensState().SCREENS.value;
 const { targetEl, currentScreen } = useScreensState();

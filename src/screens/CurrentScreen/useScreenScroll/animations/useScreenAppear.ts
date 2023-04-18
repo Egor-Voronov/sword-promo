@@ -1,5 +1,5 @@
 import { useMotion } from "@vueuse/motion";
-import type { ScreenAppearArgs } from "./types/ScreenAppearArgs";
+import type { ScreenAppearArgs } from "../types/ScreenAppearArgs";
 
 export const useScreenAppear = ({ targetEl, enterY }: ScreenAppearArgs) => {
   useMotion(targetEl.value, {
