@@ -1,0 +1,71 @@
+@import "fonts";
+
+/*------- FIXED PANELS -------*/
+%FixedPanelsBoldFont {
+  @extend %europeBold;
+  text-transform: uppercase;
+  font-size: toRemMob(15);
+  letter-spacing: toRemMob(-1);
+
+  @include _desktop {
+    font-size: toRem(25);
+    letter-spacing: toRem(-1);
+  }
+}
+
+%FixedPanelsNormalFont {
+  @extend %europeNormal;
+  text-transform: uppercase;
+  letter-spacing: toRem(-2.5);
+
+  @include _desktop {
+    font-size: toRem(25);
+    letter-spacing: toRem(-2.5);
+  }
+}
+
+/*------- HERO SCREEN -------*/
+%RunningLineFont {
+  @extend %europeBold;
+  text-transform: uppercase;
+  font-size: toRemMob(60);
+  letter-spacing: toRemMob(-2);
+
+  @include _desktop {
+    font-size: toRem(120);
+    letter-spacing: toRem(-1);
+  }
+}
+
+/*------- ADVANTAGES SCREEN -------*/
+%AdvantageTitleFont {
+  @extend %europeNormal;
+  font-size: toRemMob(15);
+  letter-spacing: toRemMob(-1);
+
+  @include _desktop {
+    font-size: toRem(25);
+    letter-spacing: toRem(-2);
+  }
+}
+
+%AdvantageDescriptionFont {
+  @extend %interRegular;
+  font-size: toRemMob(10);
+
+  @include _desktop {
+    font-size: toRem(15);
+  }
+}
+
+/*------- PREORDER SCREEN -------*/
+%PreorderBtnFont {
+  @extend %europeNormal;
+  font-size: toRemMob(10);
+  letter-spacing: toRemMob(-1);
+
+  @include _desktop {
+    font-size: toRem(18);
+    letter-spacing: toRem(-1);
+  }
+}
