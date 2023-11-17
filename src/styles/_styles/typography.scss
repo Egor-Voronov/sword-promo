@@ -1,5 +1,15 @@
 @import "fonts";
 
+/*------- DEFAULT -------*/
+%DefaultInterFont {
+  @extend %interRegular;
+  font-size: toRemMob(10);
+
+  @include _desktop {
+    font-size: toRem(15);
+  }
+}
+
 /*------- FIXED PANELS -------*/
 %FixedPanelsBoldFont {
   @extend %europeBold;
@@ -46,15 +56,6 @@
   @include _desktop {
     font-size: toRem(25);
     letter-spacing: toRem(-2);
-  }
-}
-
-%AdvantageDescriptionFont {
-  @extend %interRegular;
-  font-size: toRemMob(10);
-
-  @include _desktop {
-    font-size: toRem(15);
   }
 }
 

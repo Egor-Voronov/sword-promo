@@ -46,7 +46,7 @@ const currGood = useCurrentGood().currentGood.value;
   }
 
   &Description {
-    @extend %AdvantageDescriptionFont;
+    @extend %DefaultInterFont;
   }
 }
 </style>

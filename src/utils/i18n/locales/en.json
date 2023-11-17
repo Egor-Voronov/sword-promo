@@ -20,5 +20,6 @@
   },
   "preorder": {
     "preorderBtn": "Pre-order"
-  }
+  },
+  "screenFlip": "Flip the screen horizontally and reload the page."
 }
